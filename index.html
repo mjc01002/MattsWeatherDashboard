@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Matt's Weather Dashboard</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css">
+  </head>
+  <header>
+   
+        <h1>Weather Dashboard
+        <p>Get you weather forecast</p>
+        </h1>
+    
+</header>
+  <body>
+    <div class="container">
+        <div class="row justify-content-start">
+          <div class="col-3">
+           <h1>Search for a City</h1>
+                <input class="search" type="text" id="city"/>
+                <br>
+                    <button onclick=formSubmitHandler() class="btn">Search</button>
+                        <div id="response-container"></div>
+                    <div class="row justify-content-start">
+                        <div class="col">
+                            <p class="recent" id="recentCities"> Recent </p>
+                        </div>
+                    </div>
+          </div>
+          
+            <div class="col-9">
+                <div class="border border-dark">City Forecast</div>
+                <div class="row justify-content-center p-2">
+                    <div class="col-2 border border-dark p-2 m-1 fiveDay">
+                        Day 1
+                    </div>
+                    <div class="col-2 border border-dark p-2 m-1 fiveDay">
+                        Day2 
+                    </div>
+                    <div class="col-2 border border-dark p-2 m-1 fiveDay">
+                        Day3 
+                    </div>
+                    <div class="col-2 border border-dark p-2 m-1 fiveDay">
+                        Day4  
+                    </div>
+                    <div class="col-2 border border-dark p-2 m-1 fiveDay">
+                        Day5  
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        
+    
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <script src="./assets/js/script.js"></script>
+</body>
+</html>
