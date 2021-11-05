@@ -32,9 +32,6 @@
     text-align: center;
     
   }
-  .currentDay h1{
-    text-transform: capitalize;
-  }
 
   .cityForecast h1{
       font-size: 24px;
@@ -53,7 +50,14 @@
   .recent{
     border-top: 5px solid black;
     padding-top: 5px;
+  
   }
+
+  .recent2{
+    margin-left:50px;
+    margin-right:50px;
+  }
+  
 
   .btn {
     border-radius: 15px;
@@ -67,10 +71,25 @@
     background-color: var(--color2);
   }
 
+  .recentBtn {
+    border-radius: 15px;
+    background-color:var(--color1);
+    color: var(--color2);
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+
+  .recentBtn:hover {
+    color:var(--color1);
+    background-color: var(--color2);
+  }
+
   .fiveDay {
     color: var(--color2);  
     background-color: var(--color1);
     border-radius: 5px;
+    text-align: left;
+    font-size: 16px;
   }
   
   
