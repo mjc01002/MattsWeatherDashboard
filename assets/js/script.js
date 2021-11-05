@@ -22,7 +22,7 @@ var city = cityInputEl.value.trim();
       $("#currentDay").append(city);
 
     } else {
-        alert("Please enter a city username");
+        alert("Please enter a city");
     } 
 };
 
@@ -67,6 +67,22 @@ fetch(apiCall).then(function(response) {
     uvEl.append(uv);
     document.getElementById("UV").append(uvEl);
 
+    var iconEl = document.createElement("icon");
+    var icon =data.current.weather[0].icon;
+    iconEl.append(icon);
+    document.getElementById("icon").append(icon)
+    document.getElementById("icon").setAttribute("src" , "http://openweathermap.org/img/wn/" +icon+ "@2x.png");
+
+    // set color on uv index
+    if (uv <= 3){
+      $("#UV").addClass("uvLow");
+    } else if(uv <=4 || uv <= 6) {
+      $("#UV").addClass("uvMed");
+    } else if(uv <=7) {
+      $("#UV").addClass("uvHigh");
+    }else{};
+
+
     //Five Day Forecast Section
 
     for (i=1; i<6; i++) {
@@ -80,16 +96,11 @@ fetch(apiCall).then(function(response) {
     document.getElementById(y).append(dateEl);
     
     var w = ("icon" + i);
-    var img = document.createElement(w); 
-    //var iconEl = document.createElement(w);
-    var icon = data.daily[i].weather[0].icon;
-    img.src = "https://openweathermap.org/img/wn/" + icon + "@2x.png"; 
-    img.append(img.src);
-    document.getElementById(w).append(img);
-    
-     
-    
- 
+    var iconEl = document.createElement(w);
+    var icon =data.daily[i].weather[0].icon;
+    iconEl.append(icon);
+    document.getElementById(w).append(icon)
+    document.getElementById(w).setAttribute("src" , "http://openweathermap.org/img/wn/" +icon+ "@2x.png");
     
     var u = ("temp" + i);
     var temp1El = document.createElement(u);
@@ -115,7 +126,7 @@ fetch(apiCall).then(function(response) {
 
 });
 });
- 
+    
       var button = document.createElement("button");
       button.innerHTML = city;
       button.className = "recentBtn";
