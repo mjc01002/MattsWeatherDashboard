@@ -159,7 +159,7 @@ if (retrievedCities) {
   for (i = 0; i < recentCities.length; i++) {
     city2 = recentCities[i];
     console.log(city2)
-    var button = document.createElement("button");
+    var button = document.createElement("div");
     button.setAttribute("id", ("city" + i));
     button.innerHTML = recentCities[i];
     button.className = "recentBtn";
