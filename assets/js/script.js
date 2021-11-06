@@ -134,7 +134,7 @@ var getCord = function (city) {
   recentCities.push(city);
   localStorage.setItem("city", JSON.stringify(recentCities));
 
-  var button = document.createElement("button");
+  var button = document.createElement("div");
   button.innerHTML = city;
   button.className = "recentBtn";
   button.onclick = function () {
@@ -158,16 +158,28 @@ if (retrievedCities) {
 
   for (i = 0; i < recentCities.length; i++) {
     city2 = recentCities[i];
-    var button = document.createElement("recentButtons");
+    console.log(city2)
+    var button = document.createElement("button");
+    button.setAttribute("id", ("city" + i));
     button.innerHTML = recentCities[i];
-    button.className = "btn";
-    button.onclick = function () {
-      recent2(city2);
-    };
+    button.className = "recentBtn";
     document.getElementById("recentButtons").append(button);
 
   }
-}
+  
+    button.onclick = function (event) {
+        console.log(event.target)
+        //var x = document.getItem
+       // var clickedCity2 = clickedCity.innerText
+        //var x = button.textContent;
+        //console.log(x)
+        recent(event.target.innerHTML);
+    };
+    
+  
+    
+  }
+
 
 
 // allows the user to click on recent button after it created. This is used before the website is refreshed.
