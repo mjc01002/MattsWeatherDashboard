@@ -164,23 +164,11 @@ if (retrievedCities) {
     button.innerHTML = recentCities[i];
     button.className = "recentBtn";
     document.getElementById("recentButtons").append(button);
-
-  }
-  
     button.onclick = function (event) {
-        console.log(event.target)
-        //var x = document.getItem
-       // var clickedCity2 = clickedCity.innerText
-        //var x = button.textContent;
-        //console.log(x)
-        recent(event.target.innerHTML);
-    };
-    
-  
-    
+      recent(event.target.innerHTML);
+  };
   }
-
-
+};
 
 // allows the user to click on recent button after it created. This is used before the website is refreshed.
 function recent(city) {
