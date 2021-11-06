@@ -273,7 +273,7 @@ function recent(city) {
 
 
 }
-
+// is used with the recent buttons after the page is refreshed
 function recent2(city2) {
 
   var apiCall = "https://api.openweathermap.org/data/2.5/weather?q=" + city2 + "&appid=34497f5e5244ea1659db421cd1f2a1de";
